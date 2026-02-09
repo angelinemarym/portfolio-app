@@ -116,9 +116,32 @@ const FocusScrollItem = ({ children }) => {
     );
 };
 
+const Modal = ({ isOpen, onClose, award }) => {
+    if (!isOpen || !award) return null;
+
+    return (
+        <div className="modal-overlay" onClick={onClose}>
+            <div className="modal-container" onClick={e => e.stopPropagation()}>
+                <button className="modal-close" onClick={onClose}>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </button>
+                <img src={award.image} alt={award.title} className="modal-image" />
+                <div className="modal-content">
+                    <h3 className="modal-title">{award.title}</h3>
+                    <p className="modal-description">{award.description}</p>
+                </div>
+            </div>
+        </div>
+    );
+};
+
 function App() {
     const [time, setTime] = React.useState(new Date());
     const [location, setLocation] = React.useState('');
+    const [selectedAward, setSelectedAward] = React.useState(null);
 
     React.useEffect(() => {
         const timer = setInterval(() => setTime(new Date()), 1000);
@@ -336,7 +359,12 @@ function App() {
                         <h2 className="section-title">Honors & Awards</h2>
                         <div className="grid">
                             {awards.map((award, index) => (
-                                <div key={index} className="card" style={{ display: 'flex', gap: '1.5rem' }}>
+                                <div
+                                    key={index}
+                                    className="card award-card"
+                                    style={{ display: 'flex', gap: '1.5rem', cursor: 'pointer' }}
+                                    onClick={() => setSelectedAward(award)}
+                                >
                                     <div style={{ color: '#f59e0b' }}>
                                         <Icon name={award.type === "award" ? "award" : "star"} />
                                     </div>
@@ -349,6 +377,12 @@ function App() {
                         </div>
                     </section>
                 </FadeInSection>
+
+                <Modal
+                    isOpen={!!selectedAward}
+                    onClose={() => setSelectedAward(null)}
+                    award={selectedAward}
+                />
 
                 <FadeInSection>
                     <div className="code-window">

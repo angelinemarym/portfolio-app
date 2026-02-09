@@ -68,12 +68,14 @@ export const awards = [
     {
         title: "Best Paper Award",
         description: "2025 IEEE International Conference (ICoICT) for \"BEEXPERT\" research.",
-        type: "award"
+        type: "award",
+        image: "/best-paper-award.jpg"
     },
     {
         title: "Chinese Government Scholarship",
         description: "Full scholarship for Master's program at Beijing Institute of Technology.",
-        type: "scholarship"
+        type: "scholarship",
+        image: "/admission-notice.jpg"
     }
 ];
 
