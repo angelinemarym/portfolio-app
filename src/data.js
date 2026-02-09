@@ -125,3 +125,46 @@ export const publications = [
         url: "https://ieeexplore.ieee.org/document/10390261"
     }
 ];
+
+export const skills = [
+    {
+        category: "Languages",
+        id: "languages",
+        items: [
+            { name: "Javascript", icon: "https://cdn.simpleicons.org/javascript" },
+            { name: "Python", icon: "https://cdn.simpleicons.org/python" },
+            { name: "C#", icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Logo_C_sharp.svg/500px-Logo_C_sharp.svg.png?20221121173824" },
+            { name: "Go", icon: "https://cdn.simpleicons.org/go" }
+        ]
+    },
+    {
+        category: "Frameworks & Tools",
+        id: "frameworks",
+        items: [
+            { name: "Django", icon: "https://cdn.simpleicons.org/django" },
+            { name: ".NET Core", icon: "https://cdn.simpleicons.org/dotnet" },
+            { name: "ReactJS", icon: "https://cdn.simpleicons.org/react" },
+            { name: "NextJS", icon: "https://cdn.simpleicons.org/nextdotjs" },
+            { name: "React Native", icon: "https://cdn.simpleicons.org/react" },
+            { name: "Azure Devops", icon: "https://cdn.iconscout.com/icon/free/png-512/free-azure-devops-icon-svg-download-png-3029870.png?f=webp&w=512" }
+        ]
+    },
+    {
+        category: "Design & Office",
+        id: "design",
+        items: [
+            { name: "Microsoft Office", icon: "https://cdn.simpleicons.org/onlyoffice" },
+            { name: "Adobe Photoshop", icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Adobe_Photoshop_CC_icon.svg/1280px-Adobe_Photoshop_CC_icon.svg.png" },
+            { name: "Adobe Illustrator", icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Adobe_Illustrator_CC_icon.svg/1280px-Adobe_Illustrator_CC_icon.svg.png?20251029195730" }
+        ]
+    },
+    {
+        category: "Languages Spoken",
+        id: "spoken",
+        items: [
+            { name: "Indonesian", icon: "ID" },
+            { name: "English", icon: "EN" },
+            { name: "Mandarin", icon: "CN" }
+        ]
+    }
+];

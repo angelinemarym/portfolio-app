@@ -1,5 +1,5 @@
 import React from 'react';
-import { projects, experience, awards, education, publications } from './data';
+import { projects, experience, awards, education, publications, skills } from './data';
 
 const Icon = ({ name }) => {
     const icons = {
@@ -175,6 +175,7 @@ function App() {
                         <li><a href="#education">Education</a></li>
                         <li><a href="#projects">Projects</a></li>
                         <li><a href="#experience">Experience</a></li>
+                        <li><a href="#skills">Skills</a></li>
                         <li><a href="#publications">Publications</a></li>
                         <li><a href="#awards">Awards</a></li>
                     </ul>
@@ -308,6 +309,36 @@ function App() {
                                         </div>
                                     </div>
                                 </FocusScrollItem>
+                            ))}
+                        </div>
+                    </section>
+                </FadeInSection>
+
+                <FadeInSection>
+                    <section id="skills" className="section">
+                        <h2 className="section-title">Tech Stacks & Skills</h2>
+                        <div className="skills-carousel">
+                            {skills.map((category, idx) => (
+                                <div key={idx} className={`card skills-category-card cat-${category.id}`}>
+                                    <div className="skills-category-header">
+                                        <div className="skills-category-icon">
+                                            <Icon name={category.id === "languages" ? "code" : category.id === "frameworks" ? "web" : category.id === "design" ? "star" : "mail"} />
+                                        </div>
+                                        <h3 style={{ margin: 0 }}>{category.category}</h3>
+                                    </div>
+                                    <ul className="skills-list">
+                                        {category.items.map((skill, i) => (
+                                            <li key={i} className="skill-tag">
+                                                {skill.icon.startsWith('http') ? (
+                                                    <img src={skill.icon} alt={skill.name} className="skill-icon" />
+                                                ) : (
+                                                    <span style={{ fontSize: '1.2rem' }}>{skill.icon}</span>
+                                                )}
+                                                {skill.name}
+                                            </li>
+                                        ))}
+                                    </ul>
+                                </div>
                             ))}
                         </div>
                     </section>
