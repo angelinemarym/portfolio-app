@@ -134,7 +134,8 @@ export const skills = [
             { name: "Javascript", icon: "https://cdn.simpleicons.org/javascript" },
             { name: "Python", icon: "https://cdn.simpleicons.org/python" },
             { name: "C#", icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Logo_C_sharp.svg/500px-Logo_C_sharp.svg.png?20221121173824" },
-            { name: "Go", icon: "https://cdn.simpleicons.org/go" }
+            { name: "Go", icon: "https://cdn.simpleicons.org/go" },
+            { name: "SQL", icon: "https://cdn.simpleicons.org/mysql" }
         ]
     },
     {
