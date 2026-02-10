@@ -141,6 +141,7 @@ const Modal = ({ isOpen, onClose, award }) => {
 function App() {
     const [time, setTime] = React.useState(new Date());
     const [location, setLocation] = React.useState('');
+    const [isMenuOpen, setIsMenuOpen] = React.useState(false);
     const [selectedAward, setSelectedAward] = React.useState(null);
 
     React.useEffect(() => {
@@ -161,6 +162,9 @@ function App() {
         return date.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', hour12: true });
     };
 
+    const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
+    const closeMenu = () => setIsMenuOpen(false);
+
     return (
         <div className="app-container" style={{ padding: '0 2rem' }}>
             <header className="header-container">
@@ -170,21 +174,31 @@ function App() {
                     </div>
                     Portfolio
                 </div>
-                <nav style={{ background: 'rgba(255,255,255,0.5)', backdropFilter: 'blur(10px)', padding: '0.5rem 1.5rem', borderRadius: '30px', border: '1px solid var(--glass-border)' }}>
+
+                <button className={`menu-toggle ${isMenuOpen ? 'open' : ''}`} onClick={toggleMenu} aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
+                <nav className={`nav-menu ${isMenuOpen ? 'active' : ''}`}>
                     <ul style={{ display: 'flex', gap: '2rem', listStyle: 'none', fontSize: '0.85rem', fontWeight: 500 }}>
-                        <li><a href="#education">Education</a></li>
-                        <li><a href="#projects">Projects</a></li>
-                        <li><a href="#experience">Experience</a></li>
-                        <li><a href="#skills">Skills</a></li>
-                        <li><a href="#publications">Publications</a></li>
-                        <li><a href="#awards">Awards</a></li>
+                        <li><a href="#education" onClick={closeMenu}>Education</a></li>
+                        <li><a href="#projects" onClick={closeMenu}>Projects</a></li>
+                        <li><a href="#experience" onClick={closeMenu}>Experience</a></li>
+                        <li><a href="#skills" onClick={closeMenu}>Skills</a></li>
+                        <li><a href="#publications" onClick={closeMenu}>Publications</a></li>
+                        <li><a href="#awards" onClick={closeMenu}>Awards</a></li>
                     </ul>
                 </nav>
-                <div style={{ display: 'flex', gap: '1rem', color: '#666' }}>
+
+                <div className="nav-contact">
                     <a href="mailto:angeline030303@gmail.com" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', fontSize: '0.85rem', fontWeight: 500 }}>
                         <Icon name="mail" /> Contact Me
                     </a>
                 </div>
+
+                {isMenuOpen && <div className="nav-overlay" onClick={closeMenu}></div>}
             </header>
 
             <main className="container" style={{ maxWidth: '1100px', margin: '0 auto', padding: '4rem 0' }}>
