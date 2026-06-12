@@ -1,5 +1,12 @@
 export const projects = [
     {
+        title: "BambooBrain",
+        description: "An agentic AI web application to assist learners learning Chinese vocabularies and practicing speaking skills. Built using Microsoft Azure, NextJS, and .NET.",
+        category: "AGENTIC AI & EDUCATION",
+        type: "education",
+        url: "https://canva.link/vuj7351pvj8f9sh"
+    },
+    {
         title: "BEEXPERT",
         description: "AI chatbot system created to assist high school students in learning Trigonometry. Built combining GPT-4o and Retrieval Augmented Generation (RAG).",
         category: "GEN AI & EDUCATION",
@@ -66,6 +73,12 @@ export const experience = [
 
 export const awards = [
     {
+        title: "2nd Place in Code; Without Barriers Hackathon 2026",
+        description: "Awarded 2nd place in the Code; Without Barriers Hackathon 2026 for developing an agentic personal assistant.",
+        type: "award",
+        image: "/best-student-research-award.jpg"
+    },
+    {
         title: "Best Paper Award",
         description: "2025 IEEE International Conference (ICoICT) for \"BEEXPERT\" research.",
         type: "award",
@@ -84,7 +97,9 @@ export const education = [
         school: "Beijing Institute of Technology",
         degree: "Master of Science - MS, Computer Science and Technology",
         period: "Sep 2025 — Jul 2027",
-        details: [],
+        details: [
+            "Grade: 93.2/100",
+        ],
         logo: "https://upload.wikimedia.org/wikipedia/en/thumb/0/04/Beijing_Institute_of_Technology_F.C.svg/960px-Beijing_Institute_of_Technology_F.C.svg.png"
     },
     {
@@ -110,6 +125,13 @@ export const education = [
 ];
 
 export const publications = [
+    {
+        title: "Heterogeneous Tabular Data Query and Analysis System Based on Large Language Models",
+        publisher: "Frontiers of Computer Science",
+        date: "Mar 31, 2026",
+        description: "With the increase of digital information, there is a growing demand for efficiently extracting insights and answering queries from tables. However, real-world tables often feature complex structures like merged cells, multi-level headers, and block layouts. These heterogeneous tables pose significant challenges for question-answering systems. Existing research focuses primarily on normalized tables. Even state-of-the-art large language models for tabular data achieve 31% to 42% lower accuracy on heterogeneous tables. Current methods either linearize tables into text and lose structural information or adopt graph-based representations that are computationally inefficient and yield suboptimal accuracy. Moreover, these methods typically require extensive manual processing to convert complex tables into specific formats, incurring additional annotation costs. To address these limitations, this paper presents DTI-HTQA (Dual-Tree-Indexing Heterogeneous Table Question Answering), an end-to-end framework for heterogeneous table question answering. It uses a graph-based representation to preserve table semantics, a LLM-driven header recognition algorithm to eliminate manual annotations, and dual-tree indices for intelligent retrieval. Four core operators guide precise cell retrieval, while a chain-of-thought reasoning strategy enhances transparency and accuracy for complex queries. Experiments on HiTab and AIT-QA show that DTI-HTQA achieves top performance in exact match and LLM-evaluated accuracy, approaching or surpassing state-of-the-art methods. The header recognition algorithm achieves an accuracy of 88%, and an upper-bound analysis confirms that this causes only a 2–4% accuracy gap compared to gold-standard annotations, validating the feasibility of the LLM-based approach. Comprehensive ablation studies demonstrate that each component contributes meaningfully to the overall performance, with the dual-tree index providing the most substantial gains. Cost-efficiency analysis shows that DTI-HTQA achieves 52–71% lower token consumption than comparable multi-step frameworks while delivering higher accuracy. This study tackles key challenges in heterogeneous table question answering and offers a practical solution by reducing reliance on costly manual annotations, enabling more efficient use of tabular data.",
+        url: "https://journal.hep.com.cn/fcs/EN/10.1007/s11704-026-60020-2"
+    },
     {
         title: "BEEXPERT: Voice-based Chatbot with Retrieval Augmented Generation for Personal High School Mathematics Tutor",
         publisher: "IEEE",

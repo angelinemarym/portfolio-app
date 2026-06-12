@@ -232,7 +232,7 @@ function App() {
                             </p>
                             <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
                                 <a href="https://github.com/angelinemarym" target="_blank" rel="noopener noreferrer" className="btn btn-primary" style={{ padding: '0.8rem 2rem' }}>Explore Work <span style={{ fontSize: '1.1rem' }}>→</span></a>
-                                <a href="https://drive.google.com/file/d/1rlCzbkQqQFPJsy_WQ64z6RIQeNRsNGca/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="btn btn-secondary" style={{ padding: '0.8rem 2rem' }}>Download CV</a>
+                                <a href="https://drive.google.com/file/d/135inBZTIB_nKsQIN07ZDIgmGCLa5MOCN/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="btn btn-secondary" style={{ padding: '0.8rem 2rem' }}>Download CV</a>
                             </div>
                         </div>
                         <div className="profile-pic-container">
